@@ -143,9 +143,85 @@
    <section class="section-2 con-min-width min-height-50vh">
       <div class="con height-100p">
         <div class="article-detail-cell height-100p">
-          <div class="article-detail-cell__board-name"><div><span>게시판 : </span><span>공지사항 게시판</span></div></div><div class="article-detail-cell__id"><div><span>게시물 번호 : </span><span>1</span></div></div><div class="article-detail-cell__member-id"><div><span>작성자 : </span><span>Dev_J</span></div></div><div class="article-detail-cell__reg-date"><div><span>작성일 : </span><span>2020-12-19 17:19:16</span></div></div><div class="article-detail-cell__update-date"><div><span>수정일 : </span><span>2020-12-19 17:19:16</span></div><br></div><div class="article-detail-cell__title"><div><span>제목 : </span><span>Dev_J Blog에 오신것을 환영합니다.</span></div></div><div class="article-detail-cell__body height-70p "><div><span>이 블로그는 개인 블로그이며, 
+          <div class="article-detail-cell__board-name"><div><span>게시판 : </span><span>JAVA 게시판</span></div></div><div class="article-detail-cell__id"><div><span>게시물 번호 : </span><span>4</span></div></div><div class="article-detail-cell__member-id"><div><span>작성자 : </span><span>Dev_J</span></div></div><div class="article-detail-cell__reg-date"><div><span>작성일 : </span><span>2020-12-20 19:27:12</span></div></div><div class="article-detail-cell__update-date"><div><span>수정일 : </span><span>2020-12-20 19:27:12</span></div><br></div><div class="article-detail-cell__title"><div><span>제목 : </span><span>3강. println(), printf()를 통한 출력</span></div></div><div class="article-detail-cell__body height-70p "><div><span>입력을 했다면 다음은 **출력**이다.
+
+JAVA에서 출력은 **System.out.println()** 과 **System.out.printf()** 을 활용해 수행할 수 있다.
+
+이 둘은 비슷하지만 그 사용법과 결과물에서 조금 차이가 있다.
 <br>
-주로 프로그래밍, IT 관련 내용을 다룰 예정입니다.</span></div></div><br><br><nav><div id="disqus_thread"></div>
+아래 예시를 통해 그 차이를 살펴보자.
+
+### 1. System.out.println()
+```java
+//1.문장 출력
+System.out.println("명령어");
+//출력 결과: 명령어
+				
+//2.변수 출력
+int a = 50;
+System.out.println(a);
+//출력 결과: 50
+				
+//3.문장 + 변수 출력
+System.out.println("a = " + a + "이다.");
+//출력 결과: a = 50이다.
+
+//4.연속으로 사용하면 아래방향으로 출력이 진행된다.
+System.out.println("명령어1");
+System.out.println("명령어2");
+System.out.println("명령어3");
+/*출력 결과: 명령어1
+            명령어2
+            명령어3    */
+```
+<br><br>
+
+### 2. System.out.printf()
+```java
+//1.문장 출력
+System.out.printf("명령어");
+//출력 결과: 명령어
+				
+//2.변수 출력
+int a = 50;
+System.out.printf("%d",a);
+//출력 결과: 50
+
+/*
+여기서 println()과 다른점은 위와 같이 변수만 입력해서는 출력이 진행되지 않는다는 점이다. "%d"와 같이 각 변수 타입에 맞는 명령어를 입력해주어야 그 자리에 원하는 변수 값을 치환시켜 출력할 수 있다.
+
+-변수 타입과 치환명령어 (예시)
+
+int => %d
+float => %f
+String => %s
+...
+이 외에도 다양한 치환명령어가 존재한다.
+*/
+
+				
+//3.문장 + 변수 출력
+System.out.printf("a = " + a + "이다.");
+//출력 결과: a = 50이다.
+
+//4.연속으로 사용하면 println()와 다르게 가로방향으로 출력이 진행된다.
+System.out.printf("명령어1");
+System.out.printf("명령어2");
+System.out.printf("명령어3");
+//출력 결과: 명령어1명령어2명령어3
+
+/*
+만약 printf()로 println()와 같이 아래방향으로 출력을 진행시키고 싶다면 명령어 뒤에 "\n"을 입력해주면 된다.
+
+System.out.printf("명령어1\n");
+System.out.printf("명령어2\n");
+System.out.printf("명령어3\n");
+/*출력 결과: 명령어1
+            명령어2
+            명령어3    */
+
+*/
+```</span></div></div><br><br><nav><div id="disqus_thread"></div>
 <script>
     (function() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
@@ -163,7 +239,7 @@
    <section class="section-3 con-min-width">
       <div class="con">
         <div class="article-list-bottom-cell flex flex-jc-c">
-          <div class="./"><i class="fas fa-th-list"></i><a href="notice-list-1.html" class="hover-underline"> 목록 </a></div>
+          <div class="./"><a href="3.html" class="hover-underline">&lt 이전글</a></div><div class="./"><i class="fas fa-th-list"></i><a href="java-list-1.html" class="hover-underline"> 목록 </a></div><div class="./"><a href="5.html"class="hover-underline">다음글 &gt</a></div>
         </div>
       </div>
     </section>
