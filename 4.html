@@ -16,7 +16,287 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- 구글 검색엔진 등록-소유권 확인 -->
 <meta name="google-site-verification" content="37R4KcEaJU5LfiKL7GI1hu1_spJgWOazN6xy48OHhD4" />
-<title>Developers</title>
+
+<!-- Meta Tag & Open Graph -->
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=1200">
+<meta name="apple-mobile-web-app-title" content="Dev_J BLOG" />
+<!-- 메타태그정보 //-->
+<!-- META -->
+<link rel="canonical" href="https://blog.devj.me" />
+<meta name="subject" content="3강. println(), printf()를 통한 출력"/>
+<meta name="title" content="Dev_J BLOG" />
+<meta name="keywords" content="JAVA, HTML, CSS, JavaScript, MySQL" />
+<meta name="copyright" content="Dev_J BLOG" />
+<meta name="pubdate" content="2020-12-28T18:52:14" />
+<meta name="lastmod" content="2020-12-28T18:52:14" />
+<!-- OPENGRAPH -->
+<meta property="og:site_name" content="Dev_J BLOG" />
+<meta property="og:type" content="blog" />
+<meta property="og:title" content="3강. println(), printf()를 통한 출력" />
+<meta property="og:description" content="입력을 했다면 다음은 출력이다
+
+JAVA에서 출력은 Systemoutprintln 과 Systemoutprintf 을 활용해 수행할 수 있다
+
+이 둘은 비슷하지만 그 사용법과 결과물에서 조금 차이가 있다
+br
+아래 예시를 통해 그 차이를 살펴보자
+
+ 1 Systemoutprintln
+java
+1문장 출력
+Systemoutprintln명령어
+출력 결과 명령어
+				
+2변수 출력
+int a  50
+Systemoutprintlna
+출력 결과 50
+				
+3문장  변수 출력
+Systemoutprintlna    a  이다
+출력 결과 a  50이다
+
+4연속으로 사용하면 아래방향으로 출력이 진행된다
+Systemoutprintln명령어1
+Systemoutprintln명령어2
+Systemoutprintln명령어3
+출력 결과 명령어1
+            명령어2
+            명령어3    
+
+brbr
+
+ 2 Systemoutprintf
+java
+1문장 출력
+Systemoutprintf명령어
+출력 결과 명령어
+				
+2변수 출력
+int a  50
+Systemoutprintfda
+출력 결과 50
+
+
+여기서 println과 다른점은 위와 같이 변수만 입력해서는 출력이 진행되지 않는다는 점이다 d와 같이 각 변수 타입에 맞는 명령어를 입력해주어야 그 자리에 원하는 변수 값을 치환시켜 출력할 수 있다
+
+변수 타입과 치환명령어 예시
+
+int  d
+float  f
+String  s
+
+이 외에도 다양한 치환명령어가 존재한다
+
+
+				
+3문장  변수 출력
+Systemoutprintfa    a  이다
+출력 결과 a  50이다
+
+4연속으로 사용하면 println와 다르게 가로방향으로 출력이 진행된다
+Systemoutprintf명령어1
+Systemoutprintf명령어2
+Systemoutprintf명령어3
+출력 결과 명령어1명령어2명령어3
+
+
+만약 printf로 println와 같이 아래방향으로 출력을 진행시키고 싶다면 명령어 뒤에 n을 입력해주면 된다
+
+Systemoutprintf명령어1n
+Systemoutprintf명령어2n
+Systemoutprintf명령어3n
+출력 결과 명령어1
+            명령어2
+            명령어3    
+
+
+" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:image" content="images/Dev_J_logo/logo.png" />
+<meta property="og:image:alt" content="blog.devj.me" />
+<meta property="og:image:width" content="486" />
+<meta property="og:image:height" content="254" />
+<meta property="og:updated_time" content="2020-12-28T18:52:14"/>
+<meta property="og:pubdate" content="2020-12-28T18:52:14" />
+<meta property="og:url" content="https://blog.devj.me" />
+<!-- TWITTER -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="3강. println(), printf()를 통한 출력" />
+<meta name="twitter:site" content="@Dev_J BLOG" />
+<meta name="twitter:creator" content="@Dev_J BLOG" />
+<meta name="twitter:image" content="images/Dev_J_logo/logo.png">
+<meta name="twitter:description" content="입력을 했다면 다음은 출력이다
+
+JAVA에서 출력은 Systemoutprintln 과 Systemoutprintf 을 활용해 수행할 수 있다
+
+이 둘은 비슷하지만 그 사용법과 결과물에서 조금 차이가 있다
+br
+아래 예시를 통해 그 차이를 살펴보자
+
+ 1 Systemoutprintln
+java
+1문장 출력
+Systemoutprintln명령어
+출력 결과 명령어
+				
+2변수 출력
+int a  50
+Systemoutprintlna
+출력 결과 50
+				
+3문장  변수 출력
+Systemoutprintlna    a  이다
+출력 결과 a  50이다
+
+4연속으로 사용하면 아래방향으로 출력이 진행된다
+Systemoutprintln명령어1
+Systemoutprintln명령어2
+Systemoutprintln명령어3
+출력 결과 명령어1
+            명령어2
+            명령어3    
+
+brbr
+
+ 2 Systemoutprintf
+java
+1문장 출력
+Systemoutprintf명령어
+출력 결과 명령어
+				
+2변수 출력
+int a  50
+Systemoutprintfda
+출력 결과 50
+
+
+여기서 println과 다른점은 위와 같이 변수만 입력해서는 출력이 진행되지 않는다는 점이다 d와 같이 각 변수 타입에 맞는 명령어를 입력해주어야 그 자리에 원하는 변수 값을 치환시켜 출력할 수 있다
+
+변수 타입과 치환명령어 예시
+
+int  d
+float  f
+String  s
+
+이 외에도 다양한 치환명령어가 존재한다
+
+
+				
+3문장  변수 출력
+Systemoutprintfa    a  이다
+출력 결과 a  50이다
+
+4연속으로 사용하면 println와 다르게 가로방향으로 출력이 진행된다
+Systemoutprintf명령어1
+Systemoutprintf명령어2
+Systemoutprintf명령어3
+출력 결과 명령어1명령어2명령어3
+
+
+만약 printf로 println와 같이 아래방향으로 출력을 진행시키고 싶다면 명령어 뒤에 n을 입력해주면 된다
+
+Systemoutprintf명령어1n
+Systemoutprintf명령어2n
+Systemoutprintf명령어3n
+출력 결과 명령어1
+            명령어2
+            명령어3    
+
+
+" />
+<!-- GOOGLE+ -->
+<meta itemprop="headline" content="Dev_J BLOG" />
+<meta itemprop="name" content="Dev_J BLOG" />
+<meta itemprop="description" content="입력을 했다면 다음은 출력이다
+
+JAVA에서 출력은 Systemoutprintln 과 Systemoutprintf 을 활용해 수행할 수 있다
+
+이 둘은 비슷하지만 그 사용법과 결과물에서 조금 차이가 있다
+br
+아래 예시를 통해 그 차이를 살펴보자
+
+ 1 Systemoutprintln
+java
+1문장 출력
+Systemoutprintln명령어
+출력 결과 명령어
+				
+2변수 출력
+int a  50
+Systemoutprintlna
+출력 결과 50
+				
+3문장  변수 출력
+Systemoutprintlna    a  이다
+출력 결과 a  50이다
+
+4연속으로 사용하면 아래방향으로 출력이 진행된다
+Systemoutprintln명령어1
+Systemoutprintln명령어2
+Systemoutprintln명령어3
+출력 결과 명령어1
+            명령어2
+            명령어3    
+
+brbr
+
+ 2 Systemoutprintf
+java
+1문장 출력
+Systemoutprintf명령어
+출력 결과 명령어
+				
+2변수 출력
+int a  50
+Systemoutprintfda
+출력 결과 50
+
+
+여기서 println과 다른점은 위와 같이 변수만 입력해서는 출력이 진행되지 않는다는 점이다 d와 같이 각 변수 타입에 맞는 명령어를 입력해주어야 그 자리에 원하는 변수 값을 치환시켜 출력할 수 있다
+
+변수 타입과 치환명령어 예시
+
+int  d
+float  f
+String  s
+
+이 외에도 다양한 치환명령어가 존재한다
+
+
+				
+3문장  변수 출력
+Systemoutprintfa    a  이다
+출력 결과 a  50이다
+
+4연속으로 사용하면 println와 다르게 가로방향으로 출력이 진행된다
+Systemoutprintf명령어1
+Systemoutprintf명령어2
+Systemoutprintf명령어3
+출력 결과 명령어1명령어2명령어3
+
+
+만약 printf로 println와 같이 아래방향으로 출력을 진행시키고 싶다면 명령어 뒤에 n을 입력해주면 된다
+
+Systemoutprintf명령어1n
+Systemoutprintf명령어2n
+Systemoutprintf명령어3n
+출력 결과 명령어1
+            명령어2
+            명령어3    
+
+
+" />
+<meta itemprop="image" content="images/Dev_J_logo/logo.png" />
+
+<!-- 사이트 타이틀 -->
+<title>3강. println(), printf()를 통한 출력 | Dev_J BLOG | ARTICLE DETAIL</title>
+
+
+<!-- 파비콘 -->
+<link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
 
 <!-- 폰트어썸 불러오기 -->
 <link rel="stylesheet"
@@ -30,17 +310,6 @@
 <!--제이쿼리-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<!-- 토스트 UI 에디터, 자바스크립트 코어 -->
-<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
-
-<!-- 코드 미러 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/codemirror.min.css" />
-<!-- 토스트 UI 에디터, CSS 코어 -->
-<link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
-
-
-
-
 
 </head>
 
@@ -48,12 +317,12 @@
 <!-- 사이트 박스 시작 -->
 <div class="body-content min-height-100vh flex flex-column">
   <!-- 로고바 시작 -->
-  <header class="logo-bar con-min-width">
+  <header class="logo-bar con-min-width" id="header">
     <div class="con height-100p flex flex-jc-c">
-      <a href="index.html" class="logo flex flex-ai-c">
-        
+      <a href="index.html" class="logo flex flex-ai-c"> 
+        <img class="logo__img" src="images/Dev_J_logo/facebook_cover_photo_1.png" alt="">
         <span>
-          Dev_<span>J</span>Blog
+          BLOG
         </span>
       </a>
     </div>
@@ -93,7 +362,7 @@
                 </a>
               </li>
               <li>
-                <a href="https://github.com/cjy324/TIL_Jooyoung" target="_blank" class="block">
+                <a href="https://github.com/cjy324/TIL_Jooyoung#til_jooyoung" target="_blank" class="block">
                   <i class="fab fa-github"></i>
                   <span>GITHUB</span>
                 </a>
@@ -101,7 +370,7 @@
             </ul>
           </li>
           <li>
-            <a href="stat.html" class="block">
+            <a href="https://analytics.google.com/analytics/web/?hl=ko&pli=1#/p256591365/reports/defaulthome?params=_u..nav%3Ddefault" target="_blank" class="block">
               <i class="fas fa-chart-pie"></i>
               <span>STATISTICS</span>
             </a>
@@ -115,11 +384,11 @@
   <!-- 메인 컨텐츠 박스 시작 -->
   <main class="flex-grow-1">
    <!-- 메인-타이틀바 시작 -->
-   <div class="title-bar con-min-width">
-      <h1 class="con">
-		<i class="fas fa-file-invoice"></i> <span>ARTICLE DETAIL</span>
-      </h1>
-    </div>
+	<div class="title-bar con-min-width">
+		<h1 class="con">
+			<i class="fas fa-file-invoice"></i> <span>ARTICLE DETAIL</span>
+		</h1>
+	</div>
    <!-- 메인-타이틀바 종료 --><!-- 하이라이트 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
@@ -138,6 +407,9 @@
 <!-- 토스트 UI 에디터, 신택스 하이라이트 플러그인 추가 -->
 <script src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/latest/toastui-editor-plugin-code-syntax-highlight.min.js"></script>
 
+<!-- Progress-bar -->
+<script type="text/javascript" src="https://rawcdn.githack.com/mburakerman/prognroll/0feda211643153bce2c69de32ea1b39cdc64ffbe/src/prognroll.js"></script> 
+<script type="text/javascript"> $(function() { $("body").prognroll( {height:10, color:"#666666"} ); $(".content").prognroll({ custom:true }); }); </script>
 
    <!-- 메인-상세페이지 시작 -->
    <section class="section-2 con-min-width min-height-50vh">
@@ -249,6 +521,7 @@ System.out.printf("명령어3\n");
   <!-- 메인 컨텐츠 박스 끝 -->  <!-- 사이드바 시작 -->
   <header class="side-bar flex flex-column">
    <div class="side-bar__status-icon">
+    <div>Menu<i class="fas fa-stream"></i></div>
     <div>▶</div>
     <div>▼</div>
    </div>
@@ -290,7 +563,7 @@ System.out.printf("명령어3\n");
         </ul>
       </li>
       <li>
-        <a href="stat.html" class="block">
+        <a href="https://analytics.google.com/analytics/web/?hl=ko&pli=1#/p256591365/reports/defaulthome?params=_u..nav%3Ddefault" target="_blank" class="block">
           <i class="fas fa-chart-pie"></i>
           <span>STATISTICS</span>
         </a>
@@ -298,27 +571,21 @@ System.out.printf("명령어3\n");
     </ul>
    </nav>
   </header>
-  <!-- 사이드바 끝 -->  <!-- 맨 위 버튼 시작 -->
+  <!-- 사이드바 끝 -->    <!-- 맨 위 버튼 시작 -->
   <nav class="top-button flex flex-jc-c flex-ai-c">
     <div class="">
       <a href="#header">▲ TOP</a> 
     </div>     
   </nav>
   <!-- 맨 위 버튼 끝 -->
-
-
   <!-- 푸터 시작 -->
   <footer class="bottom-bar con-min-width">
     <div class="con flex flex-ai-c">
       <a href="#" class="logo logo--mini flex flex-ai-c">
-       
-        <span>
-          Dev_<span>J</span>Blog
-        </span>
+        <img class="logo--mini__img" src="images/Dev_J_logo/facebook_cover_photo_1.png" alt="">
       </a>
-
       <div class="bottom-bar__site-info">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eos ipsum necessitatibus doloremque quos voluptate debitis earum aut a consequuntur explicabo deleniti qui eius facere, harum error eveniet vel laudantium.
+        COPYRIGHT 2020. Dev_J. All rights reserved.
       </div>
     </div>
   </footer>
