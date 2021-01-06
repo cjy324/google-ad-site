@@ -28,8 +28,8 @@
 <meta name="title" content="Dev_J BLOG" />
 <meta name="keywords" content="JAVA, HTML, CSS, JavaScript, MySQL" />
 <meta name="copyright" content="Dev_J BLOG" />
-<meta name="pubdate" content="2020-12-28T18:52:13" />
-<meta name="lastmod" content="2020-12-28T18:52:13" />
+<meta name="pubdate" content="2021-01-06T22:21:48" />
+<meta name="lastmod" content="2021-01-06T22:21:48" />
 <!-- OPENGRAPH -->
 <meta property="og:site_name" content="Dev_J BLOG" />
 <meta property="og:type" content="blog" />
@@ -40,8 +40,8 @@
 <meta property="og:image:alt" content="blog.devj.me" />
 <meta property="og:image:width" content="486" />
 <meta property="og:image:height" content="254" />
-<meta property="og:updated_time" content="2020-12-28T18:52:13"/>
-<meta property="og:pubdate" content="2020-12-28T18:52:13" />
+<meta property="og:updated_time" content="2021-01-06T22:21:48"/>
+<meta property="og:pubdate" content="2021-01-06T22:21:48" />
 <meta property="og:url" content="https://blog.devj.me" />
 <!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image" />
@@ -103,7 +103,7 @@
           <li>
             <a href="index.html" class="block">
               <i class="fas fa-home"></i>
-              <span>HOME</span>
+              <span>ABOUT</span>
             </a>
           </li>
           <li>
@@ -112,7 +112,7 @@
               <span>ARTICLES</span>
             </a>
             <ul>
-              <li><a href="notice-list-1.html" class="block"><i class="fas fa-exclamation"></i> <span>NOTICE</span> BOARD</a></li><li><a href="java-list-1.html" class="block"><i class="fab fa-java"></i> <span>JAVA</span> BOARD</a></li>
+              <li><a href="notice-list-1.html" class="block"><i class="fas fa-exclamation"></i> <span>NOTICE</span> BOARD</a></li><li><a href="java-list-1.html" class="block"><i class="fab fa-java"></i> <span>JAVA</span> BOARD</a></li><li><a href="html-list-1.html" class="block"><i class="fab fa-html5"></i> <span>HTML & CSS & JS</span> BOARD</a></li>
             </ul>
           </li>
           <li>
@@ -136,7 +136,13 @@
             </ul>
           </li>
           <li>
-            <a href="https://analytics.google.com/analytics/web/?hl=ko&pli=1#/p256591365/reports/defaulthome?params=_u..nav%3Ddefault" target="_blank" class="block">
+            <a href="search.html" class="block">
+              <i class="fas fa-search"></i>
+              <span>SEARCH</span>
+            </a>
+          </li>
+          <li>
+            <a href="statistics.html" class="block">
               <i class="fas fa-chart-pie"></i>
               <span>STATISTICS</span>
             </a>
@@ -148,7 +154,7 @@
   <!-- 메뉴바 끝 --> 
 
   <!-- 메인 컨텐츠 박스 시작 -->
-  <main class="flex-grow-1">
+  <main class="main-box flex-grow-1">
    <!-- 메인-타이틀바 시작 -->
 	<div class="title-bar con-min-width">
 		<h1 class="con">
@@ -161,10 +167,22 @@
        <img class="img1" src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fGNvZGV8ZW58MHwwfDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
        <img class="img2" src="https://images.unsplash.com/photo-1592991538534-00972b6f59ab?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjN8fGtleWJvYXJkc3xlbnwwfDB8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
        <img class="img3" src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTZ8fGphdmF8ZW58MHwwfDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
-       <nav>
-        <span> &lt; Welcome &gt; </span>
-        <span><br>This is Dev_J Blog</span>
-       </nav>
+     <!-- 메인-홈-공지 리스트 페이지 시작 -->  
+     <div class="section-home-list flex flex-jc-fe">
+      <div class="home-list">
+        <span>&lt NOTICE &gt</span>
+        <header>
+          <div class="home-list__cell-head">
+            <div class="home-list__cell-id">번호</div>
+            <div class="home-list__cell-title">제목</div>
+          </div>
+        </header>
+        <div class="home-list__cell-body">
+          <div><div class="home-list__cell-id">6</div><div class="home-list__cell-title"><a href="article_detail_6.html" class="hover-underline">YouTube 영상 테스트입니다.</a></div></div><div><div class="home-list__cell-id">1</div><div class="home-list__cell-title"><a href="article_detail_1.html" class="hover-underline">Dev_J Blog에 오신것을 환영합니다.📣📣</a></div></div>
+        </div>
+      </div>
+     </div>
+     <!-- 메인-홈-공지 리스트 페이지 끝 --> 
      </div>
    </section>
    <!-- 메인-index 끝 -->
@@ -190,7 +208,7 @@
           <span>ARTICLES</span>
         </a>
         <ul>
-          <li><a href="notice-list-1.html" class="block"><i class="fas fa-exclamation"></i> <span>NOTICE</span></a></li><li><a href="java-list-1.html" class="block"><i class="fab fa-java"></i> <span>JAVA</span></a></li>
+          <li><a href="notice-list-1.html" class="block"><i class="fas fa-exclamation"></i> <span>NOTICE</span></a></li><li><a href="java-list-1.html" class="block"><i class="fab fa-java"></i> <span>JAVA</span></a></li><li><a href="html-list-1.html" class="block"><i class="fab fa-html5"></i> <span>HTML & CSS & JS</span></a></li>
         </ul>
       </li>
       <li>
@@ -214,7 +232,13 @@
         </ul>
       </li>
       <li>
-        <a href="https://analytics.google.com/analytics/web/?hl=ko&pli=1#/p256591365/reports/defaulthome?params=_u..nav%3Ddefault" target="_blank" class="block">
+        <a href="search.html" class="block">
+          <i class="fas fa-search"></i>
+          <span>SEARCH</span>
+        </a>
+      </li>
+      <li>
+        <a href="statistics.html" class="block">
           <i class="fas fa-chart-pie"></i>
           <span>STATISTICS</span>
         </a>
